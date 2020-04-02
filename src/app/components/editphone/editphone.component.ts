@@ -5,7 +5,7 @@ import { UploadService } from '../../services/upload.service';
 import { Global } from '../../services/global';
 import { Router, ActivatedRoute, Params} from '@angular/router';
 import { NgForm  } from '@angular/forms';
-
+ 
 @Component({
   selector: 'app-editphone',
   templateUrl:'../createphones/createphones.component.html',
@@ -51,18 +51,18 @@ export class EditphoneComponent implements OnInit {
     );
   }
 
-  onSubmit(projectForm: NgForm){
+  onSubmit(phoneForm: NgForm){
   	this._phoneService.updatePhone(this.phone).subscribe(
       response=>{
       	if(response.phone){
       		if(this.filesToUpload){//to upload the image when I have to upload it
   				//UPLOAD THE IMAGE
-	            this._uploadService.makeFileRequest(Global.url+'upload-image/'+response.phone._id, [], this.filesToUpload,'image')
+	            this._uploadService.makeFileRequest(Global.url+'upload-image-phone/'+response.phone._id, [], this.filesToUpload,'image')
 
 	              .then((result:any)=>{
 	                this.save_phone=result.phone;
 	                //console.log(result);
-	                this.status='success';
+	                this.status='success'; 
 	                
 	              });
 		    }else{
