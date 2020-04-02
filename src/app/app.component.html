@@ -1,0 +1,35 @@
+<header>
+  <div>
+  <ul>
+    <li>
+          <a [routerLink]="['/sobre-mi']" [routerLinkActive]="['active']">Sobre mi</a>
+    </li>
+    <li>
+      <a [routerLink]="['/productos']" [routerLinkActive]="['active']">Productos</a></li>
+    <li id="logo">
+      <a  href="#" [routerLinkActive]="['active']">kitpc-FP</a>
+    </li>
+    <li>
+      <a [routerLink]="['/crear']" [routerLinkActive]="['active']">Crear</a>
+    </li>
+    <li>
+      <a [routerLink]="['/contacto']" [routerLinkActive]="['active']">Contacto</a>
+    </li>   
+  </ul>
+</div>
+</header>
+
+<section id="content">
+  <router-outlet></router-outlet>
+</section>
+
+<footer>
+  Servicio técnico en computación kitpcfp.com&copy;
+</footer>
+
+<!-- <li id="people"> 
+      <select id="ac" > 
+        <option class="op" [routerLink]="['/productos']" [routerLinkActive]="['active']" value="1">Productos</option>
+          <option class="op" [routerLink]="['/productos']" [routerLinkActive]="['active']" value="2">Tauren Mills</option>          
+      </select>
+    </li> -->

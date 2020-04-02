@@ -1,0 +1,17 @@
+
+<div class="global">
+	<h2>Laptops</h2>
+
+	<ul>
+		<li *ngFor="let product of products" class="product">
+			<a [routerLink]="['/producto', product._id]">
+				<div class="image">
+					<img src="{{url+'get-image/'+product.image}}" *ngIf="product.image">
+				</div>			
+				<h3>{{product.name}}</h3>
+				<p>{{product.model}}</p> 
+			</a>
+		</li>
+	</ul>
+	<div class="clearfix"></div>
+</div>

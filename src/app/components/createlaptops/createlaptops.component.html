@@ -1,0 +1,65 @@
+<div class="global" *ngIf="product">
+	
+	<h2>{{title}}</h2> 
+	<div class="message success" *ngIf="status=='success'" >
+		El producto se ha creado correctamente, puedes <a [routerLink]="['/producto', save_product._id]" *ngIf="product"> verlo aquí</a> 
+		
+	</div>
+	<div class="message failed" *ngIf="status=='failed'">
+		El producto no se ha creado correctamente
+	</div>
+	<form #productForm="ngForm" (ngSubmit)="onSubmit(productForm)" >
+		
+		<p>
+			<label for="name">Nombre</label>
+			<input type="text" name="name" #name="ngModel"  [(ngModel)]="product.name" required ngModel  />
+			<span class="form_error" *ngIf="name.touched && !name.valid">
+				El nombre es obligatorio
+			</span>
+		</p>
+		<p>
+			<label for="brand">Marca</label>
+			<input type="text" name="brand" #brand="ngModel" [(ngModel)]="product.brand" required  ngModel />
+			<span class="form_error" *ngIf="brand.touched && !brand.valid">
+				La marca es obligatorio
+			</span>
+		</p>
+		<p>
+			<label for="model">Modelo</label>
+			<input type="text" name="model" #model="ngModel" [(ngModel)]="product.model" required  ngModel />
+			<span class="form_error" *ngIf="model.touched && !model.valid">
+				El modelo es obligatorio
+			</span>
+		</p>
+		<p>
+			<label for="description">Descripción</label>
+			<textarea type="text" name="description" #description="ngModel" [(ngModel)]="product.description"></textarea>			
+		</p>
+		<p>
+			<label for="color">color</label>
+			<input type="text" name="color" #color="ngModel" [(ngModel)]="product.color" required ngModel />
+			<span class="form_error" *ngIf="color.touched && !color.valid">
+				El color es obligatorio
+			</span>
+		</p>
+		<p>
+			<label for="price">Precio</label>
+			<input type="number" name="price" #price="ngModel" [(ngModel)]="product.price" required ngModel  />
+			<span class="form_error" *ngIf="price.touched && !price.valid">
+				El precio es obligatorio
+			</span>
+		</p>
+				
+		<p>
+			<label for="image" >Imagen del producto</label>
+			<span class="image" *ngIf="product.image" style="float: none;">
+				<img src="{{url+'get-image/'+ product.image}}"  style="width: 100px;">
+			</span><br>
+			<input type="file" name="image" placeholder="Subir imagen" (change)="fileChangeEvent($event)">
+			
+		</p>
+
+		<input type="submit" style="background:  rgba(8, 69, 138, 0.8); padding: 5px;color:white;" value="Enviar" [disabled]="!productForm.form.valid">
+	</form>
+</div>
+ 

@@ -1,0 +1,65 @@
+<div class="global" *ngIf="phone"> 
+	 
+	<h2>{{title}}</h2> 
+	<div class="message success" *ngIf="status=='success'" >
+		El phone se ha creado correctamente, puedes <a [routerLink]="['/phone', save_phone._id]" *ngIf="phone"> verlo aquí</a> 
+		
+	</div>
+	<div class="message failed" *ngIf="status=='failed'">
+		El phoneo no se ha creado correctamente
+	</div>
+	<form #phoneForm="ngForm" (ngSubmit)="onSubmit(phoneForm)" >
+		
+		<p>
+			<label for="name">Nombre</label>
+			<input type="text" name="name" #name="ngModel"  [(ngModel)]="phone.name" required ngModel  />
+			<span class="form_error" *ngIf="name.touched && !name.valid">
+				El nombre es obligatorio
+			</span>
+		</p>
+		<p>
+			<label for="brand">Marca</label>
+			<input type="text" name="brand" #brand="ngModel" [(ngModel)]="phone.brand" required  ngModel />
+			<span class="form_error" *ngIf="brand.touched && !brand.valid">
+				La marca es obligatorio
+			</span>
+		</p>
+		<p>
+			<label for="model">Modelo</label>
+			<input type="text" name="model" #model="ngModel" [(ngModel)]="phone.model" required  ngModel />
+			<span class="form_error" *ngIf="model.touched && !model.valid">
+				El modelo es obligatorio
+			</span>
+		</p>
+		<p>
+			<label for="description">Descripción</label>
+			<textarea type="text" name="description" #description="ngModel" [(ngModel)]="phone.description"></textarea>			
+		</p>
+		<p>
+			<label for="color">color</label>
+			<input type="text" name="color" #color="ngModel" [(ngModel)]="phone.color" required ngModel />
+			<span class="form_error" *ngIf="color.touched && !color.valid">
+				El color es obligatorio
+			</span>
+		</p>
+		<p>
+			<label for="price">Precio</label>
+			<input type="number" name="price" #price="ngModel" [(ngModel)]="phone.price" required ngModel  />
+			<span class="form_error" *ngIf="price.touched && !price.valid">
+				El precio es obligatorio
+			</span>
+		</p>
+				
+		<p>
+			<label for="image" >Imagen del phone</label>
+			<span class="image" *ngIf="phone.image" style="float: none;">
+				<img src="{{url+'get-image-phone/'+ phone.image}}"  style="width: 100px;">
+			</span><br>
+			<input type="file" name="image" placeholder="Subir imagen" (change)="fileChangeEvent($event)">
+			
+		</p>
+
+		<input type="submit" style="background:  rgba(8, 69, 138, 0.8); padding: 5px;color:white;" value="Enviar" [disabled]="!phoneForm.form.valid">
+	</form>
+</div>
+ 
