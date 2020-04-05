@@ -1,4 +1,4 @@
-### **Logo Kitpc FP**
+### **Logo Kitpc FP** Ver mas imágenes del proyecto [aquí](https://www.behance.net/gallery/94759191/Servicio-tcnico-en-computacion-y-tecnologia)
 <img src="imagenes/franklin/logo.png" width="200">
 
 ### **Descripción del Proyecto**
