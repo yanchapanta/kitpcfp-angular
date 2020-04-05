@@ -1,17 +1,8 @@
 ### **Logo Kitpc FP**
 <img src="imagenes/franklin/logo.png" width="200">
 
-### Descripción del Proyecto:
+### **Descripción del Proyecto**
+La función de esta página es guardar en la base de datos los productos en tecnología como laptops y smartphone, en su diseño tiene como portada un fondo un  vídeo auto ejecutable.
 
-Es una pagina que ofrece productos de servicio técnico
-<img src="imagenes/FONDO.png">
+![] (https://github.com/yanchapanta/kitpcfp-angular/issues/5#issuecomment-609470281)
 
-### INICIO
-![Screenshot_12](https://user-images.githubusercontent.com/34762008/78509774-2af7d800-7756-11ea-875d-a2134b1ac091.png)
-
-### PRODUCTOS
-![productos](https://user-images.githubusercontent.com/34762008/78508908-ec5f1f00-774f-11ea-98b5-de8cd7a9a3b2.png)
-### Laptops
-![laptop](https://user-images.githubusercontent.com/34762008/78509241-6ee8de00-7752-11ea-9242-4ce481015280.png)
-### Smartphone
-![cellu](https://user-images.githubusercontent.com/34762008/78509286-a6f02100-7752-11ea-98d2-c24154fd07b0.png)
