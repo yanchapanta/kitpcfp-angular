@@ -6,7 +6,10 @@
 Es una pagina que ofrece productos de servicio técnico
 <img src="imagenes/FONDO.png">
 
-### Menú de productos 
+### INICIO
+![Screenshot_12](https://user-images.githubusercontent.com/34762008/78509774-2af7d800-7756-11ea-875d-a2134b1ac091.png)
+
+### PRODUCTOS
 ![productos](https://user-images.githubusercontent.com/34762008/78508908-ec5f1f00-774f-11ea-98b5-de8cd7a9a3b2.png)
 ### Laptops
 ![laptop](https://user-images.githubusercontent.com/34762008/78509241-6ee8de00-7752-11ea-9242-4ce481015280.png)
