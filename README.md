@@ -1,8 +1,15 @@
 ### **Logo Kitpc FP** Ver mas imágenes del proyecto [aquí](https://www.behance.net/gallery/94759191/Servicio-tcnico-en-computacion-y-tecnologia)
-<img src="imagenes/franklin/logo.png" width="200">
-
 ### **Descripción del Proyecto**
-La función de esta página es guardar en la base de datos los productos en tecnología como laptops y smartphone, en su diseño tiene como portada un fondo un  vídeo auto ejecutable.
+
+El proyecto kitpc-fp dirigido para un negocio de servicios en tecnología está desarrollado con los siguientes lenguajes de programación:
+
+-Angular
+-Css3
+-Html5
+-MongoDB
+-NodeJS
+
+**La función** de esta página es guardar en la base de datos los productos en tecnología como laptops y smartphone, en su diseño tiene como portada un fondo de vídeo auto ejecutable.
 
 ### INICIO
 ![Screenshot_12](https://user-images.githubusercontent.com/34762008/78509774-2af7d800-7756-11ea-875d-a2134b1ac091.png)
